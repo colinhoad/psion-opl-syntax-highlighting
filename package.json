@@ -3,6 +3,11 @@
   "displayName": "Psion OPL",
   "description": "Syntax highlighting for the Open Psion Language (OPL) used by Psion portable computers",
   "version": "0.0.1",
+  "publisher": "colinhoad",
+  "repository": {
+		"type": "git",
+		"url": "https://github.com/colinhoad/psion-opl-syntax-highlighting.git"
+	},
   "engines": {
     "vscode": "^1.96.0"
   },

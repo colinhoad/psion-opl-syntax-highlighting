@@ -5,17 +5,20 @@
 		{
 			"include": "#comments"
 		},
-		{
+        {
+			"include": "#entities"
+		},
+        {
 			"include": "#keywords"
 		},
 		{
 			"include": "#constants"
 		},
+        {
+            "include": "#variables"
+        },
 		{
 			"include": "#strings"
-		},
-		{
-			"include": "#entities"
 		}
 	],
 	"repository": {
@@ -23,17 +26,16 @@
 			"patterns": [
 				{
 					"name": "keyword.control.opl",
-					"match": "(PROC|ENDP)"
-				},
-				{
-					"name": "keyword.operator.opl",
-					"match": "(=|\\+|-|\\/|\\*|\\**)"
+					"match": "(?i)\\b(PROC|ENDP|BEGINTRANS|BREAK|CALL|COMMITTRANS|CONTINUE|CURSOR|DO|ELSE|ELSEIF|ENDA|ENDIF|ENDV|ENDWH|IF|OFF|ON|ONERR|PAUSE|RETURN|UNTIL|WHILE)\\b"
 				},
 				{
 					"name": "keyword.other.opl",
-					"match": "(PRINT|GET)"
-				}
-			]
+					"match": "(?i)\\b(ABS|ACOS|ADDR|ADJUSTALLOC|ALERT|ALLOC|APP|APPEND|APPENDSPRITE|ASC|ASIN|AT|ATAN|BACK|BEEP|BOOKMARK|BUSY|BYREF|CACHE|CACHEHDR|CACHEREC|CACHETIDY|CANCEL|CAPTION|CHANGESPRITE|CHR$|CLEARFLAGS|CLOSE|CLOSESPRITE|CLS|CMD$|COMPACT|COMPRESS|CONST|COPY|COS|COUNT|CREATE|CREATESPRITE|DATETOSECS|DATIM$|DAY|DAYNAME$|DAYS|DAYSTODATE|DBUTTONS|DCHECKBOX|DCHOICE|DDATE|DECLARE|DEDIT|DEDITMULTI|DEFAULTWIN|DEG|DELETE|DFILE|DFLOAT|DIALOG|DIAMINIT|DIAMPOS|DINIT|DIR$|DLONG|DOW|DPOSITION|DRAWSPRITE|DTEXT|DTIME|DXINPUT|EDIT|ENTERSEND|ENTERSEND0|EOF|ERASE|ERR|ERR$|ERRX$|ESCAPE|EVAL|EXIST|EXP|EXT|EXTERNAL|FIND|FINDFIELD|FINDLIB|FIRST|FIX$|FLAGS|FLT|FONT|FREEALLOC|GAT|GBORDER|GBOX|GBUTTON|GCIRCLE|GCLOCK|GCLOSE|GCLS|GCOLOR|GCOPY|GCREATE|GCREATEBIT|GDRAWOBJECT|GELLIPSE|GEN$|GET|GET$|GETCMD$|GETDOC$|GETEVENT|GETEVENT32|GETEVENTA32|GETEVENTC|GETLIBH|GFILL|GFONT|GGMODE|GGREY|GHEIGHT|GIDENTITY|GINFO|GINFO32|GINVERT|GIPRINT|GLINEBY|GLINETO|GLOADBIT|GLOADFONT|GLOBAL|GMOVE|GORDER|GORIGINX|GORIGINY|GOTO|GOTOMARK|GPATT|GPEEKLINE|GPOLY|GPRINT|GPRINTB|GPRINTCLIP|GRANK|GSAVEBIT|GSCROLL|GSETPENWIDTH|GSETWIN|GSTYLE|GTMODE|GTWIDTH|GUNLOADFONT|GUPDATE|GUSE|GVISIBLE|GWIDTH|GX|GXBORDER|GXPRINT|GY|HEX$|HOUR|IABS|ICON|INCLUDE|INPUT|INSERT|INT|INTF|INTRANS|KEY|KEY$|KEYA|KEYC|KILLMARK|KMOD|LAST|LCLOSE|LEFT$|LEN|LENALLOC|LINKLIB|LN|LOADLIB|LOADM|LOC|LOCAL|LOCK|LOG|LOPEN|LOWER$|LPRINT|MAX|MCARD|MCASC|MEAN|MENU|MID$|MIN|MINIT|MINUTE|MKDIR|MODIFY|MONTH|MONTH$|MPOPUP|NEWOBJ|NEWOBJH|NEXT|NOTES|NUM$|ODBINFO|OPEN|OPENR|OPX|OS|PARSE$|PATH|PEEK|PI|POINTERFILTER|POKE|POS|POSITION|POSSPRITE|PRINT|PUT|RAD|RAISE|RANDOMIZE|REALLOC|RECSIZE|RENAME|REPT$|RIGHT$|RMDIR|RND|ROLLBACK|SCI$|SCREEN|SCREENINFO|SECOND|SECSTODATE|SEND|SETDOC|SETFLAGS|SETNAME|SETPATH|SIN|SPACE|SQR|STATUSWIN|STATWININFO|STD|STOP|STYLE|SUM|TAN|TESTEVENT|TRAP|TYPE|UADD|UNLOADLIB|UNLOADM|UPDATE|UPPER$|USE|USR|USR$|USUB|VAL|VAR|VECTOR|WEEK|YEAR)\\b"
+				},
+				{
+					"name": "keyword.operator.opl",
+					"match": "(=|\\+|-|\\/|\\*|\\*\\*|%)"
+				}			]
 		},
 		"constants": {
 			"patterns": [
@@ -43,6 +45,14 @@
 				}
 			]			
 		},
+        "variables": {
+            "patterns": [
+                {
+                    "name": "variable.opl",
+                    "match": "([a-zA-Z]{1}[0-9a-zA-Z]{,7}[\\$%&]?)"
+                }
+            ]
+        },
 		"comments": {
 			"patterns": [
 				{
@@ -69,16 +79,24 @@
 		"entities": {
 			"patterns": [
 				{
-					"match": "(PROC)([a-zA-Z]\\w*)\\(",
-					"captures": {
-						"1": {
-							"name": "keyword.other.opl"
-						},
-						"2": {
-							"name": "entity.name.function.opl"
-						}
-					}
-				}
+                    "match": "(PROC )([a-zA-Z0-9]\\w*):",
+                    "captures": {
+                        "1":{
+                            "name": "keyword.control.opl"
+                        },
+                        "2":{
+                            "name": "entity.name.function.opl"
+                        }
+                    }
+				},
+                {
+                    "match": "(.*):\\(",
+                    "captures": {
+                        "1":{
+                            "name": "entity.name.function.opl"
+                        }
+                    }
+                }
 			]
 		}
 	},
