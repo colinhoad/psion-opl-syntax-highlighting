@@ -23,15 +23,15 @@
 			"patterns": [
 				{
 					"name": "keyword.control.opl",
-					"match": "()"
+					"match": "(PROC|ENDP)"
 				},
 				{
 					"name": "keyword.operator.opl",
-					"match": "(=|\\+|-|\\/|\\*|\\**|%)"
+					"match": "(=|\\+|-|\\/|\\*|\\**)"
 				},
 				{
 					"name": "keyword.other.opl",
-					"match": "(PROC|ENDP)"
+					"match": "(PRINT|GET)"
 				}
 			]
 		},
@@ -63,6 +63,21 @@
 							"match": "\\\\."
 						}
 					]
+				}
+			]
+		},
+		"entities": {
+			"patterns": [
+				{
+					"match": "(PROC)([a-zA-Z]\\w*)\\(",
+					"captures": {
+						"1": {
+							"name": "keyword.other.opl"
+						},
+						"2": {
+							"name": "entity.name.function.opl"
+						}
+					}
 				}
 			]
 		}
