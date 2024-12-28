@@ -1,0 +1,71 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "OPL",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#entities"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.opl",
+					"match": "()"
+				},
+				{
+					"name": "keyword.operator.opl",
+					"match": "(=|\\+|-|\\/|\\*|\\**|%)"
+				},
+				{
+					"name": "keyword.other.opl",
+					"match": "(PROC|ENDP)"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.numeric.opl",
+					"match": "([0-9]+)"
+				}
+			]			
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.rem.opl",
+					"match": "REM.*$"
+				}
+			]
+		},
+		"strings": {
+			"patterns": [
+				{
+					"name": "string.quoted.double.opl",
+					"begin": "\"",
+					"end": "\"",
+					"patterns": [
+						{
+							"name": "constant.character.escape.opl",
+							"match": "\\\\."
+						}
+					]
+				}
+			]
+		}
+	},
+	"scopeName": "source.opl"
+}

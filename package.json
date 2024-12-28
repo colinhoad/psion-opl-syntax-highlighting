@@ -1,0 +1,25 @@
+{
+  "name": "psion-opl",
+  "displayName": "Psion OPL",
+  "description": "Syntax highlighting for the Open Psion Language (OPL) used by Psion portable computers",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "opl",
+      "aliases": ["OPL", "opl"],
+      "extensions": [".opl"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "opl",
+      "scopeName": "source.opl",
+      "path": "./syntaxes/opl.tmLanguage.json"
+    }]
+  }
+}
