@@ -6,7 +6,7 @@ Syntax highlighting for the Open Psion Language (OPL) used by Psion portable com
 
 Provides keyword syntax highlighting, including distinguishing between control keywords (e.g. `PROC`/`ENDP`, `IF`/`ELSE`/`ENDIF` etc.) and other keywords (e.g. `PRINT`, `INPUT` etc.), as well as recognising `REM` comments and legitimate variable names.
 
-\!\[Example screenshot\]\(img/psion-opl-sample.png)
+![Screenshot](https://github.com/colinhoad/psion-opl-syntax-highlighting/blob/main/img/psion-opl-sample.png?raw=true)
 
 ## Requirements
 
