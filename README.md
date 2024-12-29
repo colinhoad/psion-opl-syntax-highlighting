@@ -10,7 +10,15 @@ Provides keyword syntax highlighting, including distinguishing between control k
 
 ## Requirements
 
-This has been written for use with VS Code.
+This has been written for use with VS Code. If, after working on OPL source code files in VS Code, you wish to transfer said files to your Psion device (physically or via emulation), ensure that the files are saved using DOS CP437 encoding and that line breaks are set to CRLF. This can be controlled within VS Code at the bottom right of the screen: 
+
+![File encoding](https://github.com/colinhoad/psion-opl-syntax-highlighting/blob/main/img/vscode-encoding.png?raw=true)
+
+Or, via `Preferences` > `Settings` > `Text Editor` > `Files`
+
+![File encoding](https://github.com/colinhoad/psion-opl-syntax-highlighting/blob/main/img/vscode-file-settings.png?raw=true)
+
+If you need to change encoding or line breaks for files you have already created, ensure you use the Save As option after changing the encoding and/or line break settings so that VS Code overwrites the existing file with the correct encoding.
 
 ## Installation
 
