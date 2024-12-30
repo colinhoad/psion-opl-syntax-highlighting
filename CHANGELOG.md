@@ -7,7 +7,7 @@ All notable changes to the "psion-opl-syntax-highlighting" extension will be doc
 - Fixes for:
     - Scientific notation floats now recognised as constants
     - Variables only identified if 8 characters or less
-    - De-indentation after `ENDP`, `ENDIF`, `ENDH` and `UNTIL`
+    - De-indentation after `ENDP`, `ENDIF`, `ENDWH` and `UNTIL`
 
 ## 0.0.1
 
