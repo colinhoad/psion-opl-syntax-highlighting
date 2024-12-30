@@ -16,40 +16,5 @@
     "surroundingPairs": [
         ["(", ")"],
         ["\"", "\""]
-    ],
-    // governs behaviour after Enter is pressed
-    "onEnterRules": [
-        {
-            "beforeText": "^PROC .*(:\\s*|\\)\\s*)$",
-            "action": {"indent": "indentOutdent", "appendText": "ENDP"}
-        },
-        {
-            "beforeText": "^proc .*(:\\s*|\\)\\s*)$",
-            "action": {"indent": "indentOutdent", "appendText": "endp"}
-        },
-        {
-            "beforeText": "^(if |\\s*if ).*$",
-            "action": {"indent": "indentOutdent", "appendText": "endif"}
-        },
-        {
-            "beforeText": "^(IF |\\s*IF ).*$",
-            "action": {"indent": "indentOutdent", "appendText": "ENDIF"}
-        },
-        {
-            "beforeText": "^(do |\\s*do ).*$",
-            "action": {"indent": "indentOutdent", "appendText": "until"}
-        },
-        {
-            "beforeText": "^(DO |\\s*DO ).*$",
-            "action": {"indent": "indentOutdent", "appendText": "UNTIL"}
-        },
-        {
-            "beforeText": "^(while |\\s*while ).*$",
-            "action": {"indent": "indentOutdent", "appendText": "endwh"}
-        },
-        {
-            "beforeText": "^(WHILE |\\s*WHILE ).*$",
-            "action": {"indent": "indentOutdent", "appendText": "ENDWH"}
-        }
     ]
 }
