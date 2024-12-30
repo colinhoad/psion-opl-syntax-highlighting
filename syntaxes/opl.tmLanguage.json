@@ -22,6 +22,18 @@
 		}
 	],
 	"repository": {
+		"constants": {
+			"patterns": [
+                {
+                    "name": "constant.numeric.opl",
+                    "match": "(-)?(\\d\\.?\\d*[Ee][\\+-]?\\d+|(\\d+\\.\\d*|\\d\\.\\d+)|\\d+)"
+                },
+				{
+					"name": "constant.numeric.opl",
+					"match": "(-)?([0-9]+)"
+				}
+			]			
+		},
 		"keywords": {
 			"patterns": [
 				{
@@ -37,19 +49,11 @@
 					"match": "(=|\\+|-|\\/|\\*|\\*\\*|%)"
 				}			]
 		},
-		"constants": {
-			"patterns": [
-				{
-					"name": "constant.numeric.opl",
-					"match": "([0-9]+)"
-				}
-			]			
-		},
         "variables": {
             "patterns": [
                 {
                     "name": "variable.opl",
-                    "match": "([a-zA-Z]{1}[0-9a-zA-Z]{,7}[\\$%&]?)"
+                    "match": "[a-zA-Z]([a-zA-Z0-9]{0,6}[$%&]{1}|[a-zA-Z0-9]{0,7})"
                 }
             ]
         },

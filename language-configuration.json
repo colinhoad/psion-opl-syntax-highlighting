@@ -28,28 +28,60 @@
             "action": {"indent": "indent"}
         },
         {
-            "beforeText": "\\b^(if \\b|\\s*\\bif \\b).*$",
+            "beforeText": "^(if |\\s*if ).*$",
             "action": {"indent": "indent"}
         },
         {
-            "beforeText": "\\b^(IF \\b|\\s*\\bIF \\b).*$",
+            "beforeText": "^(IF |\\s*IF ).*$",
             "action": {"indent": "indent"}
         },
         {
-            "beforeText": "\\b^(do\\b|\\s*\\bdo\\b).*$",
+            "beforeText": "^(do|do |\\s*do|\\s*do ).*$",
             "action": {"indent": "indent"}
         },
         {
-            "beforeText": "\\b^(DO\\b|\\s*\\bDO\\b).*$",
+            "beforeText": "^(DO|DO |\\s*DO|\\s*DO ).*$",
             "action": {"indent": "indent"}
         },
         {
-            "beforeText": "\\b^(while \\b|\\s*\\bwhile \\b).*$",
+            "beforeText": "^(while |\\s*while ).*$",
             "action": {"indent": "indent"}
         },
         {
-            "beforeText": "\\b^(WHILE \\b|\\s*\\bWHILE \\b).*$",
+            "beforeText": "^(WHILE |\\s*WHILE ).*$",
             "action": {"indent": "indent"}
+        },
+        {
+            "beforeText": "^(\\s*ENDP|\\s*ENDP\\s*)$",
+            "action": {"indent": "outdent"}
+        },
+        {
+            "beforeText": "^(\\s*endp|\\s*endp\\s*)$",
+            "action": {"indent": "outdent"}
+        },
+        {
+            "beforeText": "^(\\s*ENDWH|\\s*ENDWH\\s*)$",
+            "action": {"indent": "outdent"}
+        },
+        {
+            "beforeText": "^(\\s*endwh|\\s*endwh\\s*)$",
+            "action": {"indent": "outdent"}
+        },
+        {
+            "beforeText": "^(\\s*UNTIL|\\s*UNTIL\\s*)$",
+            "action": {"indent": "outdent"}
+        },
+        {
+            "beforeText": "^(\\s*until|\\s*until\\s*)$",
+            "action": {"indent": "outdent"}
+        },
+        {
+            "beforeText": "^(\\s*ENDIF|\\s*ENDIF\\s*)$",
+            "action": {"indent": "outdent"}
+        },
+        {
+            "beforeText": "^(\\s*endif|\\s*endif\\s*)$",
+            "action": {"indent": "outdent"}
         }
     ]
 }
