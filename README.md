@@ -63,6 +63,10 @@ Please get in touch if you notice anything strange and/or highlighting that does
 
 ## Release Notes
 
+### 0.0.2
+
+Fixes made following feedback from kapfab
+
 ### 0.0.1
 
 Initial release.
