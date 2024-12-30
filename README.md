@@ -24,13 +24,38 @@ If you need to change encoding or line breaks for files you have already created
 
 You can add this extension to VS Code manually by creating a package and then using the generated vsix file to install. 
 
-From the command line:
+### Linux
+
+If you do not already have `npm` installed, install it using your package manager, e.g.
+
+`sudo apt install npm`
+
+Next, use `npm` to install the VS Code Extension Manager:
+
+`npm install -g @vscode/vsce`
+
+Now, navigate to the root folder of the psion-opl extension and run:
 
 `vsce package`
 
 This creates the `psion-opl-0.0.1.vsix` file. You can then install it into VS Code as follows:
 
 `code --install-extension psion-opl-0.0.1.vsix`
+
+### Windows
+
+If you do not already have it, install Node.js which can be obtained [here](https://nodejs.org/en/download)
+
+Once installed, you can use `npm` from the command line to install the VS Code Extension Manager:
+
+`npm install -g @vscode/vsce`
+
+Now, navigate to the root folder of the psion-opl extension and run:
+
+`vsce package`
+
+This creates the `psion-opl-0.0.1.vsix` file. You can import this into VS Code from the Extensions menu (CTRL+Shift+X), choosing the **'Install from VSIX...'** option from the three dots action menu.
+
 
 ## Known Issues
 
