@@ -16,5 +16,40 @@
     "surroundingPairs": [
         ["(", ")"],
         ["\"", "\""]
+    ],
+    // governs behaviour after Enter is pressed
+    "onEnterRules": [
+        {
+            "beforeText": "\\b^PROC \\b.*(:\\s*|\\)\\s*)$",
+            "action": {"indent": "indent"}
+        },
+        {
+            "beforeText": "\\b^proc \\b.*(:\\s*|\\)\\s*)$",
+            "action": {"indent": "indent"}
+        },
+        {
+            "beforeText": "\\b^(if \\b|\\s*\\bif \\b).*$",
+            "action": {"indent": "indent"}
+        },
+        {
+            "beforeText": "\\b^(IF \\b|\\s*\\bIF \\b).*$",
+            "action": {"indent": "indent"}
+        },
+        {
+            "beforeText": "\\b^(do\\b|\\s*\\bdo\\b).*$",
+            "action": {"indent": "indent"}
+        },
+        {
+            "beforeText": "\\b^(DO\\b|\\s*\\bDO\\b).*$",
+            "action": {"indent": "indent"}
+        },
+        {
+            "beforeText": "\\b^(while \\b|\\s*\\bwhile \\b).*$",
+            "action": {"indent": "indent"}
+        },
+        {
+            "beforeText": "\\b^(WHILE \\b|\\s*\\bWHILE \\b).*$",
+            "action": {"indent": "indent"}
+        }
     ]
 }

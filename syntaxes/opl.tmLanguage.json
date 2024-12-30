@@ -79,7 +79,7 @@
 		"entities": {
 			"patterns": [
 				{
-                    "match": "(PROC )([a-zA-Z0-9]\\w*):",
+                    "match": "(?i)\\b(PROC \\b)([a-zA-Z0-9]\\w*):",
                     "captures": {
                         "1":{
                             "name": "keyword.control.opl"
