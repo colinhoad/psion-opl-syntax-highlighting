@@ -65,7 +65,7 @@ Please get in touch if you notice anything strange and/or highlighting that does
 
 ### 0.0.3
 
-Fixed made following feedback from albrow
+Fixes made following feedback from albrow
 
 ### 0.0.2
 

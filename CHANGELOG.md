@@ -6,7 +6,7 @@ All notable changes to the "psion-opl-syntax-highlighting" extension will be doc
 - Fixes for:
     - Boolean operators (`AND`, `OR`, `NOT`) now recognised
     - Equivalence operators (`<>`,`<`,`>`,`<=`,`>=`) now recognised
-    - Suffix operators (`#`, `$`) now recognised
+    - Prefix operators (`#`, `$`) now recognised
     - All `PEEK` and `POKE` variant keywords now recognised
     - No longer treating `\` as an escape character inside a quoted string
     - Colon line separator no longer spoils syntax highlighting
