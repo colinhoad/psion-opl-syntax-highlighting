@@ -26,11 +26,11 @@
 			"patterns": [
                 {
                     "name": "constant.numeric.opl",
-                    "match": "(-)?(\\d\\.?\\d*[Ee][\\+-]?\\d+|(\\d+\\.\\d*|\\d\\.\\d+)|\\d+)"
+                    "match": "(-)?(.)?(\\d\\.?\\d*[Ee][\\+-]?\\d+|(\\d+\\.\\d*|\\d\\.\\d+)|\\d+)"
                 },
 				{
 					"name": "constant.numeric.opl",
-					"match": "(-)?([0-9]+)"
+					"match": "(-)?(.)?([0-9]+)"
 				}
 			]			
 		},

@@ -10,6 +10,7 @@ All notable changes to the "psion-opl-syntax-highlighting" extension will be doc
     - All `PEEK` and `POKE` variant keywords now recognised
     - No longer treating `\` as an escape character inside a quoted string
     - Colon line separator no longer spoils syntax highlighting
+    - Constant numerics starting with decimal point (e.g. `.25`) now recognised
 
 ## 0.0.2
 
