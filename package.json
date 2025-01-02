@@ -2,7 +2,7 @@
   "name": "psion-opl",
   "displayName": "Psion OPL",
   "description": "Syntax highlighting for the Open Psion Language (OPL) used by Psion portable computers",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "colinhoad",
   "repository": {
 		"type": "git",

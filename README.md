@@ -63,6 +63,10 @@ Please get in touch if you notice anything strange and/or highlighting that does
 
 ## Release Notes
 
+### 0.0.4
+
+Fixed numeric constant bug
+
 ### 0.0.3
 
 Fixes made following feedback from albrow
