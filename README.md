@@ -1,6 +1,6 @@
 # psion-opl
 
-Syntax highlighting for the Open Psion Language (OPL) used by Psion portable computers.
+Syntax highlighting for the Open Programming Language (OPL) used by Psion portable computers.
 
 ## Features
 
